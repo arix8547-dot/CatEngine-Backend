@@ -1,35 +1,18 @@
 {
-  "name": "catengine",
+  "name": "catengine-backend",
   "version": "1.0.0",
   "description": "CatEngine backend running on Node.js and PostgreSQL",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "arix8547-dot",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.19.2",
-    "pg": "^8.11.3"
-  },
-  "devDependencies": {
-    "@types/node": "^24.9.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
-  }
-}
-{
-  "name": "catengine-backend",
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
     "start": "node index.js"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
-    "express": "^4.19.0",
-    "pg": "^8.11.3"
+    "express": "^4.19.2",
+    "pg": "^8.11.3",
+    "dotenv": "^16.3.1"
   }
 }

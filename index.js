@@ -3,12 +3,12 @@ import pkg from "pg";
 const { Pool } = pkg;
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 10000; // Render prefers dynamic port
 
-// 🟢 Neon PostgreSQL Connection
+// 🟢 Neon PostgreSQL Connection (use env var)
 const pool = new Pool({
-  connectionString:
-    "postgresql://neondb_owner:npg_zHRFin9JLe2a@ep-dry-hill-af7d6ld0-pooler.c-2.us-west-2.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+  connectionString: process.env.DATABASE_URL, // secure way for Render
+  ssl: { rejectUnauthorized: false }
 });
 
 // 🔹 Root route
